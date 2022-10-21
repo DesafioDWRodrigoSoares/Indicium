@@ -1,0 +1,137 @@
+version: 2
+
+sources:
+    -name: desafiodw
+     schema: desafiodw
+     description: this is the sources database replica
+     tables:
+     - name: desafiondw.address
+       columns:
+        - name: Addressid
+          description: primary key of the address table
+          tests:
+            - unique
+            - not null
+        - name: city
+        - name: stateprovinceid
+
+     - name: desafiodw.businessentityaddress
+       columns:
+        - name: BusinessEntityid
+          description: primary key of the address table
+          tests:
+            - unique
+            - not null
+        - name: adressid
+
+     - name: desafiodw.countryregion
+       columns:
+        - name: countryregoncode
+          description: will be how was the primary key of person.countryregion table
+          tests:
+            - unique
+            - not null
+        - name: name
+
+     - name: desafiodw.person
+       columns:
+        - name: businessentityid
+          description: primary key of the businessentityid table
+          tests:
+            - unique
+            - not null
+     - name: firstname
+     - name: lastname
+     - name: middlename
+
+     - name: desafiodw.stateprovince
+       columns:
+        - name:	stateprovinceid
+          description: primary key of the stateprovince table
+          tests:
+            - unique
+            - not null
+        - name: name
+        - name: territoryid
+
+     - name: desafiodw.product
+       columns:
+        - name: Productid
+          description: primary key of the product table
+          tests:
+            - unique
+            - not null
+	    - name: name
+	    - name: listprice
+
+     - name: desafiodw.creditcard
+       columns:
+        - name:	Creditcardid
+          description: primary key of the creditcard table.
+          tests:
+            - unique
+            - not null
+	 - name: cardtype
+
+     - name: desafiodw.personcreditcard
+	   columns:
+        - name: BusinessEntityid
+          description: primary key of the personcreditcard table.
+	      tests:
+            - uniuqe
+            - not null
+        - name: creditcardid
+
+     - name: desafiodw.salesorderdetail
+       columns:
+        - name:	salesorderdetailid
+	      description: primary key of the salesorderdetail table.
+          tests:
+            - unique
+            - not null
+         - name: salesorderid
+         - name: productid
+	     - name: orderqty
+	     - name: unitprice
+         - name: unitpricediscount
+
+     - name: desafiodw.salesorderheader
+	   columns:
+        - name: salesorderid
+	      description: primary key of the salesorderheader table
+          tests:
+            - unique
+            - not null
+        - name: salespersonid
+	    - name: subtotal
+	    - name: orderdate
+	    - name: duedate
+	    - name: creditcardid
+
+     - name: desafiodw.salesorderreadersalesreazon
+       columns:
+        - name: Salesreazonid
+          description: primary key for the salesordersalesreazon table
+	      tests:
+            - unique
+            - notnull
+        - name: Salesorderid
+
+     - name: desafiodw.salesreason
+       columns:
+        - name: salesreazonid
+          description: primary key for the salesreazon table
+          tests:
+            - unique
+            - not null
+        - name: name
+        - name: reazontype
+
+     - name: desafiodw.salesterritory
+       columns:
+        - name: territoryid
+          description: primary key for the territoryid
+          tests:
+            - unique
+            - not null
+    	- name: name
