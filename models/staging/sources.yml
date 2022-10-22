@@ -5,7 +5,7 @@ sources:
      schema: desafiodw
      description: this is the sources database replica
      tables:
-     - name: desafiondw.address
+     - name: desafiodw.address
        columns:
         - name: Addressid
           description: primary key of the address table
