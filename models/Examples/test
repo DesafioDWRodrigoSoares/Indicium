@@ -1,1 +1,4 @@
-SELECT *  FROM `corded-tensor-366019.desafiodw.address` LIMIT 1000
+SELECT * 
+FROM desafiodw.address
+where stateprovinceid = 1
+LIMIT 1000

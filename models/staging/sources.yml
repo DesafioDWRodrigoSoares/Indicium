@@ -2,7 +2,7 @@ version: 2
 
 sources:
   - name: desafiodw
-    schema: corded-tensor-366019.desafiodw.address
+    schema: desafiodw
     description: this is the sources database replica
     tables:
       - name: desafiodw.address
