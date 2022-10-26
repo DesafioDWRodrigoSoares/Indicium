@@ -1,0 +1,1 @@
+SELECT *  FROM `corded-tensor-366019.desafiodw.address` LIMIT 1000
