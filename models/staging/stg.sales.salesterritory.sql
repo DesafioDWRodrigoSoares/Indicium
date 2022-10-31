@@ -3,7 +3,7 @@ with
     select
     territoryid
       , name
-      from {{sources('desafiodw','salesterritory')}}
+      from {{source('desafiodw','salesterritory')}}
     )
 
   Select *
